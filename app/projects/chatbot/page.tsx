@@ -84,7 +84,7 @@ export default function ChatbotCaseStudyPage() {
             ["22% JS bundle reduction", "Dependency audit and lazy loading on adjacent insurance flows"],
             ["Lighthouse 58 → 91 (+57%)", "Across the broader platform through JS cleanup and standalone build"],
           ].map(([stat, desc]) => (
-            <div key={stat} className="flex gap-4 border-b border-white/5 pb-3 last:border-0">
+            <div key={stat} className="flex gap-4 border-b border-zinc-100 dark:border-white/5 pb-3 last:border-0">
               <span className="text-emerald-400 font-semibold text-sm shrink-0 w-44">{stat}</span>
               <span className="text-zinc-500 text-sm">{desc}</span>
             </div>
@@ -95,7 +95,7 @@ export default function ChatbotCaseStudyPage() {
       <StudySection label="Challenges & Solutions">
         <div className="space-y-8">
           <div>
-            <h4 className="font-semibold text-zinc-100">Challenge 1 — Unpredictable SSE Payloads</h4>
+            <h4 className="font-semibold text-zinc-900 dark:text-zinc-100">Challenge 1 — Unpredictable SSE Payloads</h4>
             <p className="text-zinc-500 mt-2 text-sm">
               The backend emitted JSON, Python-style dicts (None/True/False), and plain text in the
               same stream. JSON.parse() failed on ~30% of payloads.
@@ -108,7 +108,7 @@ export default function ChatbotCaseStudyPage() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-zinc-100">Challenge 2 — Race Conditions Between Plans and Premium APIs</h4>
+            <h4 className="font-semibold text-zinc-900 dark:text-zinc-100">Challenge 2 — Race Conditions Between Plans and Premium APIs</h4>
             <p className="text-zinc-500 mt-2 text-sm">
               Plans and Premium return as separate SSE chunks. If Premium arrives first, cards render
               with blank prices.
@@ -122,7 +122,7 @@ export default function ChatbotCaseStudyPage() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-zinc-100">Challenge 3 — Mobile Animation Performance</h4>
+            <h4 className="font-semibold text-zinc-900 dark:text-zinc-100">Challenge 3 — Mobile Animation Performance</h4>
             <p className="text-zinc-500 mt-2 text-sm">
               Multiple Framer Motion plan cards expanding/collapsing simultaneously dropped to 30fps on
               mid-range devices.
@@ -134,7 +134,7 @@ export default function ChatbotCaseStudyPage() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-zinc-100">Challenge 4 — Government ID Validation</h4>
+            <h4 className="font-semibold text-zinc-900 dark:text-zinc-100">Challenge 4 — Government ID Validation</h4>
             <p className="text-zinc-500 mt-2 text-sm">
               Aadhar requires Verhoeff checksum validation. DOB needed leap-year awareness and
               age-limit enforcement (18–70 for standard, different for senior plans).
@@ -159,16 +159,16 @@ export default function ChatbotCaseStudyPage() {
             ["0", "FE deploys for new product launches"],
             ["<200ms", "Response on structured steps"],
           ].map(([val, label]) => (
-            <div key={label} className="rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-6 text-center">
+            <div key={label} className="rounded-2xl border border-zinc-200 dark:border-white/10 bg-violet-50 dark:bg-white/[0.03] px-5 py-6 text-center">
               <p className="text-3xl font-bold text-emerald-400">{val}</p>
-              <p className="text-sm text-zinc-400 mt-2">{label}</p>
+              <p className="text-sm text-zinc-500 mt-2">{label}</p>
             </div>
           ))}
         </div>
       </StudySection>
 
       <StudySection label="Future Improvements">
-        <ul className="list-disc space-y-2 pl-5 marker:text-zinc-600">
+        <ul className="list-disc space-y-2 pl-5 marker:text-zinc-500">
           <li>Voice input via Web Speech API — describe your trip verbally</li>
           <li>Multi-language — Hindi and regional languages for tier-2 expansion</li>
           <li>ML recommendations — suggest coverage based on destination risk profiles</li>

@@ -26,7 +26,7 @@ export default function FlickTicketCaseStudyPage() {
       </StudySection>
 
       <StudySection label="Implementation">
-        <ul className="list-disc space-y-2 pl-5 marker:text-zinc-600">
+        <ul className="list-disc space-y-2 pl-5 marker:text-zinc-500">
           <li>Dynamic seat selection UI tied to availability</li>
           <li>Backend rules for schedules and overlaps</li>
           <li>Database design that reflects bookings, seats, and events</li>
@@ -34,21 +34,21 @@ export default function FlickTicketCaseStudyPage() {
       </StudySection>
 
       <StudySection label="Challenges">
-        <ul className="list-disc space-y-2 pl-5 marker:text-zinc-600">
+        <ul className="list-disc space-y-2 pl-5 marker:text-zinc-500">
           <li>Preventing double booking under concurrency</li>
           <li>Overlapping schedules and edge cases in the calendar</li>
         </ul>
       </StudySection>
 
       <StudySection label="Solutions">
-        <ul className="list-disc space-y-2 pl-5 marker:text-zinc-600">
+        <ul className="list-disc space-y-2 pl-5 marker:text-zinc-500">
           <li>Server-side validation and transactional safeguards</li>
           <li>Queries and constraints aligned to how seats and slots are actually claimed</li>
         </ul>
       </StudySection>
 
       <StudySection label="Impact">
-        <ul className="list-disc space-y-2 pl-5 marker:text-zinc-600">
+        <ul className="list-disc space-y-2 pl-5 marker:text-zinc-500">
           <li>Dependable booking behavior for users</li>
           <li>Clearer UX around seat and time selection</li>
         </ul>

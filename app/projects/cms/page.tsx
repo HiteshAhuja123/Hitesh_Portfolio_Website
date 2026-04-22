@@ -26,7 +26,7 @@ export default function CmsCaseStudyPage() {
           their search online. Without a website, Radheshyam Glass House was completely invisible to
           this discovery channel.
         </p>
-        <p style={{ marginTop: 14, color: "rgba(232,232,240,0.4)" }}>
+        <p style={{ marginTop: 14, color: "var(--text-subtle)" }}>
           The second, harder problem: even after building a website, who maintains it? The client is
           non-technical. Any solution requiring a developer for routine content updates would become a
           bottleneck within weeks. The real product challenge was building something the client could
@@ -35,13 +35,13 @@ export default function CmsCaseStudyPage() {
       </StudySection>
 
       <StudySection label="Product Thinking">
-        <p><strong style={{ color: "rgba(232,232,240,0.8)" }}>Target users:</strong></p>
+        <p><strong style={{ color: "var(--text)" }}>Target users:</strong></p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 10, marginTop: 12, marginBottom: 20 }}>
           {["Interior designers", "Homeowners (premium)", "Hotel / office procurement", "Business owner (CMS)"].map(u => (
-            <div key={u} style={{ background: "rgba(124,110,247,0.06)", border: "1px solid rgba(124,110,247,0.15)", borderRadius: 10, padding: "10px 14px", fontSize: 13, color: "rgba(232,232,240,0.65)" }}>{u}</div>
+            <div key={u} style={{ background: "rgba(124,110,247,0.06)", border: "1px solid rgba(124,110,247,0.15)", borderRadius: 10, padding: "10px 14px", fontSize: 13, color: "var(--text-muted)" }}>{u}</div>
           ))}
         </div>
-        <p><strong style={{ color: "rgba(232,232,240,0.8)" }}>Key use cases:</strong></p>
+        <p><strong style={{ color: "var(--text)" }}>Key use cases:</strong></p>
         <div style={{ marginTop: 10, display: "flex", flexDirection: "column", gap: 8 }}>
           {[
             "Browse product catalogue → enquire via WhatsApp or contact form",
@@ -49,7 +49,7 @@ export default function CmsCaseStudyPage() {
             "View past project gallery → build trust before reaching out",
             "Client adds new products/photos in Sanity → ISR auto-publishes within 1 hour",
           ].map((uc, i) => (
-            <div key={i} style={{ display: "flex", gap: 10, fontSize: 13, color: "rgba(232,232,240,0.5)" }}>
+            <div key={i} style={{ display: "flex", gap: 10, fontSize: 13, color: "var(--text-subtle)" }}>
               <span style={{ color: "#7C6EF7", fontWeight: 700, flexShrink: 0 }}>{i + 1}.</span>
               {uc}
             </div>
@@ -67,8 +67,8 @@ export default function CmsCaseStudyPage() {
             ["Headless CMS studio", "Sanity Studio deployed on separate subdomain. Client has Editor-role access to manage products, gallery images, and hero banners independently — zero developer dependency."],
           ].map(([title, desc]) => (
             <div key={title as string}>
-              <h4 style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 600, color: "rgba(232,232,240,0.85)", marginBottom: 6 }}>{title}</h4>
-              <p style={{ fontSize: 13, color: "rgba(232,232,240,0.45)", lineHeight: 1.7, margin: 0 }}>{desc}</p>
+              <h4 style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 600, color: "var(--text)", marginBottom: 6 }}>{title}</h4>
+              <p style={{ fontSize: 13, color: "var(--text-subtle)", lineHeight: 1.7, margin: 0 }}>{desc}</p>
             </div>
           ))}
         </div>
@@ -82,9 +82,9 @@ export default function CmsCaseStudyPage() {
             ["Resend over Nodemailer/SMTP", "Serverless functions have execution time limits and cold starts — SMTP connections often time out. Resend's HTTP API is reliable on serverless with better deliverability defaults and a generous free tier."],
             ["Vercel", "ISR + Edge CDN without infra management. Free tier is sufficient for a local business site with modest traffic. Deploy previews work out of the box."],
           ].map(([tech, reason]) => (
-            <div key={tech as string} style={{ borderBottom: "1px solid rgba(255,255,255,0.05)", paddingBottom: 14 }}>
-              <p style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 600, color: "rgba(232,232,240,0.8)", marginBottom: 5 }}>{tech}</p>
-              <p style={{ fontSize: 13, color: "rgba(232,232,240,0.42)", lineHeight: 1.7, margin: 0 }}>{reason}</p>
+            <div key={tech as string} style={{ borderBottom: "1px solid var(--card-border)", paddingBottom: 14 }}>
+              <p style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 600, color: "var(--text)", marginBottom: 5 }}>{tech}</p>
+              <p style={{ fontSize: 13, color: "var(--text-muted)", lineHeight: 1.7, margin: 0 }}>{reason}</p>
             </div>
           ))}
         </div>
@@ -111,9 +111,9 @@ export default function CmsCaseStudyPage() {
             ["ISR caching on Vercel Edge", "Pages served from CDN; content changes reflect within 60 min without touching all cached pages."],
             ["lib/constants.ts for static business config", "Zero runtime fetch for base rate, WhatsApp number, contact details. Bundled at build time."],
           ].map(([opt, desc]) => (
-            <div key={opt as string} style={{ display: "flex", gap: 12, borderBottom: "1px solid rgba(255,255,255,0.04)", paddingBottom: 10 }}>
+            <div key={opt as string} style={{ display: "flex", gap: 12, borderBottom: "1px solid var(--card-border)", paddingBottom: 10 }}>
               <span style={{ color: "#7C6EF7", fontWeight: 700, fontSize: 13, flexShrink: 0, minWidth: 220 }}>{opt}</span>
-              <span style={{ fontSize: 13, color: "rgba(232,232,240,0.42)" }}>{desc}</span>
+              <span style={{ fontSize: 13, color: "var(--text-muted)" }}>{desc}</span>
             </div>
           ))}
         </div>
@@ -122,31 +122,31 @@ export default function CmsCaseStudyPage() {
       <StudySection label="Challenges & Solutions">
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
           <div>
-            <h4 style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 600, color: "rgba(232,232,240,0.85)", marginBottom: 6 }}>Challenge 1 — Non-technical client who can&apos;t use a GitHub repo or call a dev</h4>
-            <p style={{ fontSize: 13, color: "rgba(232,232,240,0.45)", lineHeight: 1.7, margin: "0 0 8px" }}>
+            <h4 style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 600, color: "var(--text)", marginBottom: 6 }}>Challenge 1 — Non-technical client who can&apos;t use a GitHub repo or call a dev</h4>
+            <p style={{ fontSize: 13, color: "var(--text-subtle)", lineHeight: 1.7, margin: "0 0 8px" }}>
               The client manages a physical store and has no technical background. Any CMS requiring developer access for updates would break within weeks.
             </p>
-            <p style={{ fontSize: 13, color: "rgba(232,232,240,0.65)", fontWeight: 500, margin: 0 }}>
+            <p style={{ fontSize: 13, color: "var(--text-muted)", fontWeight: 500, margin: 0 }}>
               ✓ Solution: Deployed Sanity Studio to a dedicated subdomain. The client logs in with their own Sanity account (Editor role). Documented a step-by-step guide covering exactly what they can manage. Zero developer dependency for content — permanently.
             </p>
           </div>
 
           <div>
-            <h4 style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 600, color: "rgba(232,232,240,0.85)", marginBottom: 6 }}>Challenge 2 — Pricing is variable — per product and per custom finish</h4>
-            <p style={{ fontSize: 13, color: "rgba(232,232,240,0.45)", lineHeight: 1.7, margin: "0 0 8px" }}>
+            <h4 style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 600, color: "var(--text)", marginBottom: 6 }}>Challenge 2 — Pricing is variable — per product and per custom finish</h4>
+            <p style={{ fontSize: 13, color: "var(--text-subtle)", lineHeight: 1.7, margin: "0 0 8px" }}>
               Glass pricing depends on size, thickness, finish, and complexity. A single flat rate calculator would mislead customers.
             </p>
-            <p style={{ fontSize: 13, color: "rgba(232,232,240,0.65)", fontWeight: 500, margin: 0 }}>
+            <p style={{ fontSize: 13, color: "var(--text-muted)", fontWeight: 500, margin: 0 }}>
               ✓ Solution: Two-layer system. Global base rate in constants.ts for the calculator widget (labelled as indicative). Per-product pricing fields in Sanity for the detail page. Calculator clearly prompts users to contact for custom finishes.
             </p>
           </div>
 
           <div>
-            <h4 style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 600, color: "rgba(232,232,240,0.85)", marginBottom: 6 }}>Challenge 3 — ISR content lag — client wants &quot;publish now&quot; behaviour</h4>
-            <p style={{ fontSize: 13, color: "rgba(232,232,240,0.45)", lineHeight: 1.7, margin: "0 0 8px" }}>
+            <h4 style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 600, color: "var(--text)", marginBottom: 6 }}>Challenge 3 — ISR content lag — client wants &quot;publish now&quot; behaviour</h4>
+            <p style={{ fontSize: 13, color: "var(--text-subtle)", lineHeight: 1.7, margin: "0 0 8px" }}>
               ISR revalidates every 60 minutes. If the client adds a product, it won&apos;t appear immediately.
             </p>
-            <p style={{ fontSize: 13, color: "rgba(232,232,240,0.65)", fontWeight: 500, margin: 0 }}>
+            <p style={{ fontSize: 13, color: "var(--text-muted)", fontWeight: 500, margin: 0 }}>
               ✓ Solution: Documented the 1-hour revalidation window clearly upfront. For urgent cases, a manual Vercel redeploy takes 30 seconds. Long-term fix: Sanity webhook → Vercel revalidatePath() for on-demand ISR — noted as a future improvement.
             </p>
           </div>
@@ -161,13 +161,13 @@ export default function CmsCaseStudyPage() {
             ["<2s", "Target LCP on mobile networks"],
             ["0 devs", "Needed for content updates post-launch"],
           ].map(([val, label]) => (
-            <div key={label} style={{ borderRadius: 14, border: "1px solid rgba(255,255,255,0.07)", background: "rgba(255,255,255,0.025)", padding: "20px 16px", textAlign: "center" }}>
+            <div key={label} style={{ borderRadius: 14, border: "1px solid var(--card-border)", background: "var(--card-bg)", padding: "20px 16px", textAlign: "center" }}>
               <p style={{ fontSize: 26, fontWeight: 800, fontFamily: "var(--font-display)", background: "linear-gradient(135deg, #7C6EF7, #E879F9)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", margin: "0 0 6px" }}>{val}</p>
-              <p style={{ fontSize: 11, color: "rgba(232,232,240,0.38)", margin: 0, lineHeight: 1.5 }}>{label}</p>
+              <p style={{ fontSize: 11, color: "var(--text-subtle)", margin: 0, lineHeight: 1.5 }}>{label}</p>
             </div>
           ))}
         </div>
-        <div style={{ marginTop: 20, padding: "16px 20px", background: "rgba(124,110,247,0.06)", border: "1px solid rgba(124,110,247,0.15)", borderRadius: 12, fontSize: 13, color: "rgba(232,232,240,0.6)", lineHeight: 1.7 }}>
+        <div style={{ marginTop: 20, padding: "16px 20px", background: "rgba(124,110,247,0.06)", border: "1px solid rgba(124,110,247,0.15)", borderRadius: 12, fontSize: 13, color: "var(--text-muted)", lineHeight: 1.7 }}>
           The most meaningful outcome isn&apos;t a performance number — it&apos;s that a 30-year-old traditional business now has a professional digital storefront that runs without ongoing developer cost. The client manages their own catalogue. That&apos;s the real product success metric.
         </div>
       </StudySection>
@@ -181,7 +181,7 @@ export default function CmsCaseStudyPage() {
             "Google Analytics 4 + WhatsApp CTA click tracking for conversion visibility",
             "Multi-language support (Marathi / Hindi) for the local customer base",
           ].map((item, i) => (
-            <div key={i} style={{ display: "flex", gap: 12, fontSize: 13, color: "rgba(232,232,240,0.45)", alignItems: "flex-start" }}>
+            <div key={i} style={{ display: "flex", gap: 12, fontSize: 13, color: "var(--text-subtle)", alignItems: "flex-start" }}>
               <span style={{ color: "rgba(124,110,247,0.6)", flexShrink: 0, fontFamily: "var(--font-display)", fontWeight: 600 }}>{i + 1}</span>
               {item}
             </div>

@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Enable class-based dark mode for Tailwind v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --font-display: var(--font-syne), sans-serif;
   --font-body: var(--font-dm-sans), sans-serif;

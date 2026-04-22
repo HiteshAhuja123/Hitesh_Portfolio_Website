@@ -25,9 +25,9 @@ export default function ILTakeCareCaseStudyPage() {
             ["AI Layer", "Gemini 1.5, MCP, RAG"],
             ["Infra", "AWS, Docker, PostgreSQL"],
           ].map(([k, v]) => (
-            <div key={k as string} className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
+            <div key={k as string} className="rounded-xl border border-zinc-200 dark:border-white/10 bg-violet-50 dark:bg-white/[0.03] p-4">
               <p className="text-zinc-500 text-xs mb-1">{k}</p>
-              <p className="text-zinc-200 font-medium text-xs">{v}</p>
+              <p className="text-zinc-800 dark:text-zinc-200 font-medium text-xs">{v}</p>
             </div>
           ))}
         </div>
@@ -59,7 +59,7 @@ export default function ILTakeCareCaseStudyPage() {
       <StudySection label="Key Features">
         <div className="space-y-8">
           <div>
-            <h4 className="font-semibold text-zinc-100">1. AI Insurance Chatbot (Agentic RAG)</h4>
+            <h4 className="font-semibold text-zinc-900 dark:text-zinc-100">1. AI Insurance Chatbot (Agentic RAG)</h4>
             <p className="text-zinc-500 mt-2 text-sm">
               A stateful, multi-turn AI agent — not a simple Q&A bot. It disambiguates user-specific vs.
               general questions using 4 Gemini function-calling tools, searches real-time policy data via
@@ -70,7 +70,7 @@ export default function ILTakeCareCaseStudyPage() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-zinc-100">2. Contactless Vitals — rPPG Face Scan</h4>
+            <h4 className="font-semibold text-zinc-900 dark:text-zinc-100">2. Contactless Vitals — rPPG Face Scan</h4>
             <p className="text-zinc-500 mt-2 text-sm">
               Computer vision feature using only the phone&apos;s front camera to measure heart rate, SpO2,
               HRV, and stress. Runs 3 rPPG algorithms in parallel (POS, CHROM, ICA) — selects winner by
@@ -81,7 +81,7 @@ export default function ILTakeCareCaseStudyPage() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-zinc-100">3. Pathocard — Medical Report Intelligence</h4>
+            <h4 className="font-semibold text-zinc-900 dark:text-zinc-100">3. Pathocard — Medical Report Intelligence</h4>
             <p className="text-zinc-500 mt-2 text-sm">
               Multi-stage pipeline: PDF/image upload → OCR (PyMuPDF) → Gemini Vision fallback →
               structured extraction → LLM-generated layman explanation. SSE streaming shows real-time
@@ -90,7 +90,7 @@ export default function ILTakeCareCaseStudyPage() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-zinc-100">4. Motor Claim Engine — Conversational Filing</h4>
+            <h4 className="font-semibold text-zinc-900 dark:text-zinc-100">4. Motor Claim Engine — Conversational Filing</h4>
             <p className="text-zinc-500 mt-2 text-sm">
               User types natural language (&quot;hit a pothole near MG Road, front bumper damaged&quot;). LLM
               extracts structured claim fields; state machine tracks currentClaimState. Only asks
@@ -100,7 +100,7 @@ export default function ILTakeCareCaseStudyPage() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-zinc-100">5. Health Quotient + Travel Itinerary</h4>
+            <h4 className="font-semibold text-zinc-900 dark:text-zinc-100">5. Health Quotient + Travel Itinerary</h4>
             <p className="text-zinc-500 mt-2 text-sm">
               Conversational health assessment → dynamic widget UI (sliders, date pickers) → PDF health
               report with scores and risk factors. Travel: AI itinerary generation with real-time
@@ -120,8 +120,8 @@ export default function ILTakeCareCaseStudyPage() {
           ]}
         />
         <div className="mt-6 space-y-2 text-sm text-zinc-500">
-          <p><strong className="text-zinc-300">Chat data flow:</strong> User types → encrypted POST → FastAPI decrypts + validates JWT → loads last 10–15 messages from PostgreSQL → Gemini selects tool → tool fetches data → Gemini streams tokens via SSE → response saved to DB.</p>
-          <p className="mt-3"><strong className="text-zinc-300">Rendering:</strong> SSR for policy detail pages (SEO). CSR for chat, camera vitals, real-time claim form. SSE for chat responses, Pathocard progress, travel itinerary generation.</p>
+          <p><strong className="text-zinc-700 dark:text-zinc-300">Chat data flow:</strong> User types → encrypted POST → FastAPI decrypts + validates JWT → loads last 10–15 messages from PostgreSQL → Gemini selects tool → tool fetches data → Gemini streams tokens via SSE → response saved to DB.</p>
+          <p className="mt-3"><strong className="text-zinc-700 dark:text-zinc-300">Rendering:</strong> SSR for policy detail pages (SEO). CSR for chat, camera vitals, real-time claim form. SSE for chat responses, Pathocard progress, travel itinerary generation.</p>
         </div>
       </StudySection>
 
@@ -135,7 +135,7 @@ export default function ILTakeCareCaseStudyPage() {
             ["Lazy-Loaded Feature Modules", "Camera module, PDF uploader, health assessment widgets only loaded when user navigates to that feature"],
             ["Section-Level RAG Chunking", "Switched from sentence-level to section-level chunking — LLM has full context, RAG accuracy jumped significantly"],
           ].map(([stat, desc]) => (
-            <div key={stat as string} className="flex gap-4 border-b border-white/5 pb-3 last:border-0">
+            <div key={stat as string} className="flex gap-4 border-b border-zinc-100 dark:border-white/5 pb-3 last:border-0">
               <span className="text-emerald-400 font-semibold text-sm shrink-0 w-52">{stat}</span>
               <span className="text-zinc-500 text-sm">{desc}</span>
             </div>
@@ -146,7 +146,7 @@ export default function ILTakeCareCaseStudyPage() {
       <StudySection label="Challenges & Solutions">
         <div className="space-y-8">
           <div>
-            <h4 className="font-semibold text-zinc-100">Challenge 1 — Harmonic Locking in rPPG Heart Rate Detection</h4>
+            <h4 className="font-semibold text-zinc-900 dark:text-zinc-100">Challenge 1 — Harmonic Locking in rPPG Heart Rate Detection</h4>
             <p className="text-zinc-500 mt-2 text-sm">
               FFT-based HR estimation locked onto 2f/3f harmonics — reporting 140 BPM when actual HR was
               70 BPM. Starting accuracy: 65%.
@@ -159,7 +159,7 @@ export default function ILTakeCareCaseStudyPage() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-zinc-100">Challenge 2 — RAG Context Conflation</h4>
+            <h4 className="font-semibold text-zinc-900 dark:text-zinc-100">Challenge 2 — RAG Context Conflation</h4>
             <p className="text-zinc-500 mt-2 text-sm">
               &quot;Do I have roadside assistance?&quot; confused with &quot;What is roadside assistance?&quot; — wrong tool
               called, wrong context fetched.
@@ -172,7 +172,7 @@ export default function ILTakeCareCaseStudyPage() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-zinc-100">Challenge 3 — Medical Report Format Chaos</h4>
+            <h4 className="font-semibold text-zinc-900 dark:text-zinc-100">Challenge 3 — Medical Report Format Chaos</h4>
             <p className="text-zinc-500 mt-2 text-sm">
               100+ pathology report formats — different labs, layouts, handwritten notes, scanned images.
               No single parser worked reliably.
@@ -198,16 +198,16 @@ export default function ILTakeCareCaseStudyPage() {
             ["65% ↓", "LLM call latency via caching"],
             ["8 langs", "Indian languages — 600M+ reach"],
           ].map(([val, label]) => (
-            <div key={label} className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-5 text-center">
+            <div key={label} className="rounded-2xl border border-zinc-200 dark:border-white/10 bg-violet-50 dark:bg-white/[0.03] px-4 py-5 text-center">
               <p className="text-2xl font-bold text-emerald-400">{val}</p>
-              <p className="text-xs text-zinc-400 mt-2">{label}</p>
+              <p className="text-xs text-zinc-500 mt-2">{label}</p>
             </div>
           ))}
         </div>
       </StudySection>
 
       <StudySection label="Future Improvements">
-        <ul className="list-disc space-y-2 pl-5 marker:text-zinc-600">
+        <ul className="list-disc space-y-2 pl-5 marker:text-zinc-500">
           <li>Voice interface with regional language STT — most Indian users prefer voice over typing</li>
           <li>Predictive claims model — use vitals + health quotient to predict claim likelihood</li>
           <li>AR damage assessment — phone camera + AR to estimate motor repair costs on-site</li>

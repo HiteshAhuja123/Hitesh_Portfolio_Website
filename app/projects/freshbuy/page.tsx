@@ -33,9 +33,9 @@ export default function FreshBuyCaseStudyPage() {
             ["Zero", "Self-service capability"],
             ["None", "Digital experience"],
           ].map(([val, label]) => (
-            <div key={label} className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-5 text-center">
+            <div key={label} className="rounded-2xl border border-zinc-200 dark:border-white/10 bg-violet-50 dark:bg-white/[0.03] px-4 py-5 text-center">
               <p className="text-2xl font-bold text-red-400">{val}</p>
-              <p className="text-xs text-zinc-400 mt-2">{label}</p>
+              <p className="text-xs text-zinc-500 mt-2">{label}</p>
             </div>
           ))}
         </div>
@@ -63,7 +63,7 @@ export default function FreshBuyCaseStudyPage() {
       <StudySection label="Key Features">
         <div className="space-y-6">
           <div>
-            <h4 className="font-semibold text-zinc-100">Intelligent Premium Calculator</h4>
+            <h4 className="font-semibold text-zinc-900 dark:text-zinc-100">Intelligent Premium Calculator</h4>
             <p className="text-zinc-500 mt-2 text-sm">
               Real-time computation for 20+ optional covers (Personal Accident, Domestic Appliances,
               Jewelry theft, Garden equipment, Pet cover). Dual calculation modes: built-up area-based
@@ -73,7 +73,7 @@ export default function FreshBuyCaseStudyPage() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-zinc-100">Modular Coverage Builder</h4>
+            <h4 className="font-semibold text-zinc-900 dark:text-zinc-100">Modular Coverage Builder</h4>
             <p className="text-zinc-500 mt-2 text-sm">
               Visual coverage cards showing benefits, exclusions, and pricing. Mandatory vs. optional
               cover logic (e.g., Terrorism cover auto-included). Cover eligibility rules based on
@@ -83,7 +83,7 @@ export default function FreshBuyCaseStudyPage() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-zinc-100">Quote Persistence & Cross-Device Resume</h4>
+            <h4 className="font-semibold text-zinc-900 dark:text-zinc-100">Quote Persistence & Cross-Device Resume</h4>
             <p className="text-zinc-500 mt-2 text-sm">
               Two-layer persistence: encrypted session storage for within-session continuity +
               server-side half-proposals via home/HalfProposal API generating a unique proposal ID.
@@ -93,7 +93,7 @@ export default function FreshBuyCaseStudyPage() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-zinc-100">Payment Orchestration</h4>
+            <h4 className="font-semibold text-zinc-900 dark:text-zinc-100">Payment Orchestration</h4>
             <p className="text-zinc-500 mt-2 text-sm">
               Multiple payment gateway support with encrypted payload transmission. Failure handling
               with retry logic. 95% payment success rate. GTM event tracking for full funnel attribution
@@ -114,8 +114,8 @@ export default function FreshBuyCaseStudyPage() {
             ["Lazy Loading", "40% faster initial load; only Step 1 assets downloaded on first paint"],
             ["GTM + GA4", "Marketing can add events without code deploys; full funnel attribution"],
           ].map(([tech, reason]) => (
-            <div key={tech as string} className="border-b border-white/5 pb-4 last:border-0">
-              <p className="font-semibold text-zinc-100 text-sm">{tech}</p>
+            <div key={tech as string} className="border-b border-zinc-100 dark:border-white/5 pb-4 last:border-0">
+              <p className="font-semibold text-zinc-900 dark:text-zinc-100 text-sm">{tech}</p>
               <p className="text-zinc-500 text-sm mt-1">{reason}</p>
             </div>
           ))}
@@ -138,7 +138,7 @@ export default function FreshBuyCaseStudyPage() {
       <StudySection label="Challenges & Solutions">
         <div className="space-y-8">
           <div>
-            <h4 className="font-semibold text-zinc-100">Challenge 1 — Real-Time Premium Recalculation</h4>
+            <h4 className="font-semibold text-zinc-900 dark:text-zinc-100">Challenge 1 — Real-Time Premium Recalculation</h4>
             <p className="text-zinc-500 mt-2 text-sm">
               Premium needed to update instantly on every add-on toggle, tenure change, or Sum Insured
               modification — involving base premiums, add-on costs, discounts, GST, and special
@@ -152,7 +152,7 @@ export default function FreshBuyCaseStudyPage() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-zinc-100">Challenge 2 — Cross-Device Quote Resumption</h4>
+            <h4 className="font-semibold text-zinc-900 dark:text-zinc-100">Challenge 2 — Cross-Device Quote Resumption</h4>
             <p className="text-zinc-500 mt-2 text-sm">
               Users started quotes on mobile, wanted to resume on desktop. Session storage alone
               doesn&apos;t work across devices.
@@ -165,7 +165,7 @@ export default function FreshBuyCaseStudyPage() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-zinc-100">Challenge 3 — Undocumented Encryption Contract</h4>
+            <h4 className="font-semibold text-zinc-900 dark:text-zinc-100">Challenge 3 — Undocumented Encryption Contract</h4>
             <p className="text-zinc-500 mt-2 text-sm">
               Backend required AES-encrypted body + separately encrypted AES key in a kv header + JWT
               format. No documentation existed for the Angular project.
@@ -178,7 +178,7 @@ export default function FreshBuyCaseStudyPage() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-zinc-100">Challenge 4 — Add-On Cover Dependencies</h4>
+            <h4 className="font-semibold text-zinc-900 dark:text-zinc-100">Challenge 4 — Add-On Cover Dependencies</h4>
             <p className="text-zinc-500 mt-2 text-sm">
               Add-ons had complex eligibility rules — jewelry cover only for content policies, PA cover
               requires nominee details, terrorism cover auto-included.
@@ -205,9 +205,9 @@ export default function FreshBuyCaseStudyPage() {
             ["–40%", "Initial load time"],
             ["99.7%", "API uptime"],
           ].map(([val, label]) => (
-            <div key={label} className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-5 text-center">
+            <div key={label} className="rounded-2xl border border-zinc-200 dark:border-white/10 bg-violet-50 dark:bg-white/[0.03] px-4 py-5 text-center">
               <p className="text-2xl font-bold text-emerald-400">{val}</p>
-              <p className="text-xs text-zinc-400 mt-2">{label}</p>
+              <p className="text-xs text-zinc-500 mt-2">{label}</p>
             </div>
           ))}
         </div>
@@ -215,15 +215,15 @@ export default function FreshBuyCaseStudyPage() {
 
       <StudySection label="Key Learnings">
         <div className="space-y-4 text-sm text-zinc-500">
-          <p><strong className="text-zinc-300">RxJS requires discipline</strong> — adopted takeUntil(destroy$) pattern religiously to prevent memory leaks across all subscription chains.</p>
-          <p><strong className="text-zinc-300">Encryption overhead is real</strong> — AES adds 80–150ms; consider encrypting only truly sensitive fields.</p>
-          <p><strong className="text-zinc-300">Progressive disclosure works</strong> — showing add-ons incrementally increased add-on adoption by 40%.</p>
-          <p><strong className="text-zinc-300">Mobile-first is non-negotiable</strong> — desktop was only 32% of traffic but took 80% of initial dev effort. Painful lesson learned.</p>
+          <p><strong className="text-zinc-700 dark:text-zinc-300">RxJS requires discipline</strong> — adopted takeUntil(destroy$) pattern religiously to prevent memory leaks across all subscription chains.</p>
+          <p><strong className="text-zinc-700 dark:text-zinc-300">Encryption overhead is real</strong> — AES adds 80–150ms; consider encrypting only truly sensitive fields.</p>
+          <p><strong className="text-zinc-700 dark:text-zinc-300">Progressive disclosure works</strong> — showing add-ons incrementally increased add-on adoption by 40%.</p>
+          <p><strong className="text-zinc-700 dark:text-zinc-300">Mobile-first is non-negotiable</strong> — desktop was only 32% of traffic but took 80% of initial dev effort. Painful lesson learned.</p>
         </div>
       </StudySection>
 
       <StudySection label="Future Improvements">
-        <ul className="list-disc space-y-2 pl-5 marker:text-zinc-600">
+        <ul className="list-disc space-y-2 pl-5 marker:text-zinc-500">
           <li>AI-powered recommendations — suggest optimal coverage based on property value and location</li>
           <li>Visual property assessment — upload photos for automated valuation</li>
           <li>SSR migration — Angular Universal for better SEO and initial load</li>

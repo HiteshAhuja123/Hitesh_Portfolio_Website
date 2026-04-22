@@ -38,9 +38,9 @@ export default function IciciLombardCaseStudyPage() {
             ["8 min", "Avg time-to-quote before"],
             ["850KB", "Initial JS bundle size"],
           ].map(([val, label]) => (
-            <div key={label} className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-5 text-center">
+            <div key={label} className="rounded-2xl border border-zinc-200 dark:border-white/10 bg-violet-50 dark:bg-white/[0.03] px-4 py-5 text-center">
               <p className="text-2xl font-bold text-emerald-400">{val}</p>
-              <p className="text-xs text-zinc-400 mt-2">{label}</p>
+              <p className="text-xs text-zinc-500 mt-2">{label}</p>
             </div>
           ))}
         </div>
@@ -75,7 +75,7 @@ export default function IciciLombardCaseStudyPage() {
             ["Token expiry handling", "TokenService stores expiry timestamp. Before every API call, checks if expiry is within 2 minutes. If yes, silently refreshes before proceeding — zero user-visible disruption even for elderly users spending 10+ min on form."],
           ].map(([title, desc]) => (
             <div key={title as string}>
-              <h4 className="font-semibold text-zinc-100">{title}</h4>
+              <h4 className="font-semibold text-zinc-900 dark:text-zinc-100">{title}</h4>
               <p className="text-zinc-500 mt-2 text-sm">{desc}</p>
             </div>
           ))}
@@ -91,8 +91,8 @@ export default function IciciLombardCaseStudyPage() {
             ["CryptoJS + JSEncrypt", "AES-256-CBC for body encryption, RSA-2048 for key exchange; matches legacy backend contract."],
             ["Docker + AWS ECS", "Multi-stage builds for minimal image size; ECS for auto-scaling under campaign traffic spikes. Image reduced from 1.2GB → 380MB (–68%)."],
           ].map(([tech, reason]) => (
-            <div key={tech as string} className="border-b border-white/5 pb-4 last:border-0">
-              <p className="font-semibold text-zinc-100 text-sm">{tech}</p>
+            <div key={tech as string} className="border-b border-zinc-100 dark:border-white/5 pb-4 last:border-0">
+              <p className="font-semibold text-zinc-900 dark:text-zinc-100 text-sm">{tech}</p>
               <p className="text-zinc-500 text-sm mt-1">{reason}</p>
             </div>
           ))}
@@ -114,7 +114,7 @@ export default function IciciLombardCaseStudyPage() {
       <StudySection label="Challenges & Solutions">
         <div className="space-y-8">
           <div>
-            <h4 className="font-semibold text-zinc-100">Challenge 1 — Dynamic Step Count</h4>
+            <h4 className="font-semibold text-zinc-900 dark:text-zinc-100">Challenge 1 — Dynamic Step Count</h4>
             <p className="text-zinc-500 mt-2 text-sm">
               Steps 4 and 5 only render based on earlier answers. The progress bar needed to reflect
               the real total, not a fixed 6.
@@ -127,7 +127,7 @@ export default function IciciLombardCaseStudyPage() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-zinc-100">Challenge 2 — Token Expiry Mid-Form</h4>
+            <h4 className="font-semibold text-zinc-900 dark:text-zinc-100">Challenge 2 — Token Expiry Mid-Form</h4>
             <p className="text-zinc-500 mt-2 text-sm">
               Users spending 10+ minutes on the form (common for elderly travelers filling DOB/health
               fields) would hit JWT expiry on submission.
@@ -140,7 +140,7 @@ export default function IciciLombardCaseStudyPage() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-zinc-100">Challenge 3 — Undocumented API Encryption Contract</h4>
+            <h4 className="font-semibold text-zinc-900 dark:text-zinc-100">Challenge 3 — Undocumented API Encryption Contract</h4>
             <p className="text-zinc-500 mt-2 text-sm">
               The ICICI backend required AES-encrypted body + RSA-encrypted key + a specific header
               format — none of it was documented for the Next.js project.
@@ -166,16 +166,16 @@ export default function IciciLombardCaseStudyPage() {
             ["15+", "GA4 funnel events"],
             ["99.9%", "API uptime"],
           ].map(([val, label]) => (
-            <div key={label} className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-5 text-center">
+            <div key={label} className="rounded-2xl border border-zinc-200 dark:border-white/10 bg-violet-50 dark:bg-white/[0.03] px-4 py-5 text-center">
               <p className="text-2xl font-bold text-emerald-400">{val}</p>
-              <p className="text-xs text-zinc-400 mt-2">{label}</p>
+              <p className="text-xs text-zinc-500 mt-2">{label}</p>
             </div>
           ))}
         </div>
       </StudySection>
 
       <StudySection label="Future Improvements">
-        <ul className="list-disc space-y-2 pl-5 marker:text-zinc-600">
+        <ul className="list-disc space-y-2 pl-5 marker:text-zinc-500">
           <li>Autosave to localStorage — resume abandoned form sessions (currently lost on tab close)</li>
           <li>A/B test step order — test &quot;travelers before dates&quot; variant</li>
           <li>Real-time quote preview — show estimated price range as user fills in traveler details</li>
