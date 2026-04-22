@@ -6,11 +6,11 @@ export default function Skills() {
     },
     {
       label: "Backend & APIs",
-      skills: ["FastAPI", "REST APIs", "MCP Tool Architecture", "Node.js", ".NET / C#", "JSON"],
+      skills: ["FastAPI","DS", "REST APIs", "MCP Tool Architecture", "Node.js", ".NET / C#", "Java", "JSON"],
     },
     {
       label: "Database",
-      skills: ["SQL", "Oracle DB", "MongoDB"],
+      skills: ["SQL", "Oracle DB", "MongoDB", "DBMS"],
     },
     {
       label: "DevOps & Tools",
