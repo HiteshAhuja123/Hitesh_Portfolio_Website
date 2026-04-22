@@ -8,7 +8,7 @@ export default function Contact() {
         Let&apos;s build something <span className="grad-text">great</span>
       </h2>
 
-      <p className="reveal reveal-delay-2" style={{ color: "rgba(232,232,240,0.42)", fontSize: "clamp(14px, 2.5vw, 17px)", lineHeight: 1.7, marginBottom: 36 }}>
+      <p className="reveal reveal-delay-2" style={{ color: "var(--text-muted)", fontSize: "clamp(14px, 2.5vw, 17px)", lineHeight: 1.7, marginBottom: 36 }}>
         Open to full-time roles, freelance projects, and interesting problems. If you&apos;re building something real, I&apos;d love to hear about it.
       </p>
 
@@ -34,18 +34,18 @@ export default function Contact() {
             { label: "Resume", href: "/resume.pdf" },
           ].map(l => (
             <a key={l.label} href={l.href} target="_blank" rel="noopener noreferrer"
-              style={{ fontSize: "clamp(11px, 2vw, 13px)", fontFamily: "var(--font-display)", fontWeight: 500, color: "rgba(232,232,240,0.38)", textDecoration: "none", letterSpacing: "0.04em", transition: "color 0.2s" }}
+              style={{ fontSize: "clamp(11px, 2vw, 13px)", fontFamily: "var(--font-display)", fontWeight: 500, color: "var(--text-subtle)", textDecoration: "none", letterSpacing: "0.04em", transition: "color 0.2s" }}
               onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "rgba(124,110,247,0.9)"}
-              onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(232,232,240,0.38)"}>
+              onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "var(--text-subtle)"}>
               {l.label} ↗
             </a>
           ))}
         </div>
       </div>
 
-      <div className="reveal reveal-delay-4" style={{ marginTop: 60, paddingTop: 24, borderTop: "1px solid rgba(255,255,255,0.05)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 10 }}>
-        <span style={{ fontSize: 11, color: "rgba(232,232,240,0.18)", fontFamily: "var(--font-display)" }}>Hitesh Ahuja — 2025</span>
-        <span style={{ fontSize: 11, color: "rgba(232,232,240,0.18)", fontFamily: "var(--font-display)" }}>Built with Next.js</span>
+      <div className="reveal reveal-delay-4" style={{ marginTop: 60, paddingTop: 24, borderTop: "1px solid var(--card-border)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 10 }}>
+        <span style={{ fontSize: 11, color: "var(--text-faint)", fontFamily: "var(--font-display)" }}>Hitesh Ahuja — 2025</span>
+        <span style={{ fontSize: 11, color: "var(--text-faint)", fontFamily: "var(--font-display)" }}>Built with Next.js</span>
       </div>
     </section>
   );

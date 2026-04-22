@@ -50,7 +50,7 @@ export default function Experience() {
       <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
         {jobs.map((job, i) => (
           <div key={job.period} className={`card-hover reveal reveal-delay-${i + 1}`}
-            style={{ background: "rgba(255,255,255,0.025)", borderRadius: 18, padding: "clamp(20px, 4vw, 28px)", position: "relative", overflow: "hidden" }}>
+            style={{ background: "var(--card-bg)", borderRadius: 18, padding: "clamp(20px, 4vw, 28px)", position: "relative", overflow: "hidden" }}>
             <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: 3, background: `linear-gradient(to bottom, ${job.accent}, transparent)` }} />
 
             <div className="exp-head-mobile" style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 6, marginBottom: 6 }}>
@@ -59,14 +59,14 @@ export default function Experience() {
                 <div style={{ fontSize: "clamp(12px, 2vw, 14px)", color: job.accent, fontFamily: "var(--font-display)", fontWeight: 500 }}>{job.role}</div>
               </div>
               <div style={{ textAlign: "right" }}>
-                <div style={{ fontSize: 12, color: "rgba(232,232,240,0.38)", fontFamily: "var(--font-display)" }}>{job.period}</div>
-                <div style={{ fontSize: 11, color: "rgba(232,232,240,0.22)", marginTop: 2 }}>{job.location}</div>
+                <div style={{ fontSize: 12, color: "var(--text-subtle)", fontFamily: "var(--font-display)" }}>{job.period}</div>
+                <div style={{ fontSize: 11, color: "var(--text-faint)", marginTop: 2 }}>{job.location}</div>
               </div>
             </div>
 
             <ul style={{ margin: "12px 0 0", padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 8 }}>
               {job.bullets.map((b, bi) => (
-                <li key={bi} style={{ fontSize: "clamp(12px, 2vw, 14px)", color: "rgba(232,232,240,0.5)", lineHeight: 1.65, display: "flex", gap: 10, alignItems: "flex-start" }}>
+                <li key={bi} style={{ fontSize: "clamp(12px, 2vw, 14px)", color: "var(--text-muted)", lineHeight: 1.65, display: "flex", gap: 10, alignItems: "flex-start" }}>
                   <span style={{ width: 5, height: 5, borderRadius: "50%", background: job.accent, flexShrink: 0, marginTop: 7, opacity: 0.7 }} />
                   {b}
                 </li>
@@ -79,14 +79,14 @@ export default function Experience() {
       {/* Education */}
       <div style={{ marginTop: 40 }}>
         <div className="reveal section-label" style={{ marginBottom: 16 }}>Education</div>
-        <div className="reveal reveal-delay-1 card-hover" style={{ background: "rgba(255,255,255,0.025)", borderRadius: 18, padding: "clamp(18px, 4vw, 24px)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 14 }}>
+        <div className="reveal reveal-delay-1 card-hover" style={{ background: "var(--card-bg)", borderRadius: 18, padding: "clamp(18px, 4vw, 24px)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 14 }}>
           <div>
             <h3 style={{ fontSize: "clamp(14px, 2.5vw, 17px)", fontWeight: 700, margin: "0 0 4px" }}>B.E. Computer Engineering</h3>
-            <div style={{ fontSize: "clamp(12px, 2vw, 14px)", color: "rgba(232,232,240,0.45)" }}>Thadomal Shahani Engineering College, Bandra, Mumbai</div>
+            <div style={{ fontSize: "clamp(12px, 2vw, 14px)", color: "var(--text-subtle)" }}>Thadomal Shahani Engineering College, Bandra, Mumbai</div>
           </div>
           <div>
             <div style={{ fontSize: "clamp(15px, 2.5vw, 17px)", fontFamily: "var(--font-display)", fontWeight: 700 }} className="grad-text">CGPA 8.42 / 10</div>
-            <div style={{ fontSize: 11, color: "rgba(232,232,240,0.28)", marginTop: 3, textAlign: "right" }}>2021 – 2025</div>
+            <div style={{ fontSize: 11, color: "var(--text-faint)", marginTop: 3, textAlign: "right" }}>2021 – 2025</div>
           </div>
         </div>
       </div>

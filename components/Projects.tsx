@@ -51,16 +51,16 @@ export default function Projects() {
       <div className="projects-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))", gap: 18 }}>
         {projects.map((p, i) => (
           <div key={p.title} className={`card-hover reveal reveal-delay-${(i % 3) + 1}`}
-            style={{ background: "rgba(255,255,255,0.025)", borderRadius: 18, padding: "24px", display: "flex", flexDirection: "column", gap: 14, position: "relative", overflow: "hidden" }}>
+            style={{ background: "var(--card-bg)", borderRadius: 18, padding: "24px", display: "flex", flexDirection: "column", gap: 14, position: "relative", overflow: "hidden" }}>
             <div style={{ position: "absolute", top: -40, right: -40, width: 110, height: 110, borderRadius: "50%", background: `radial-gradient(circle, ${p.accent}18 0%, transparent 70%)`, pointerEvents: "none" }} />
             <span style={{ fontSize: 10, fontFamily: "var(--font-display)", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: p.accent, border: `1px solid ${p.accent}30`, padding: "4px 10px", borderRadius: 100, background: `${p.accent}08`, alignSelf: "flex-start" }}>
               {p.tag}
             </span>
             <h3 style={{ fontSize: "clamp(16px, 2.5vw, 19px)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.25, margin: 0 }}>{p.title}</h3>
-            <p style={{ color: "rgba(232,232,240,0.48)", fontSize: 13, lineHeight: 1.65, margin: 0 }}>{p.desc}</p>
+            <p style={{ color: "var(--text-muted)", fontSize: 13, lineHeight: 1.65, margin: 0 }}>{p.desc}</p>
             <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 5 }}>
               {p.highlights.map(h => (
-                <li key={h} style={{ fontSize: 12, color: "rgba(232,232,240,0.38)", display: "flex", alignItems: "center", gap: 8 }}>
+                <li key={h} style={{ fontSize: 12, color: "var(--text-subtle)", display: "flex", alignItems: "center", gap: 8 }}>
                   <span style={{ width: 4, height: 4, borderRadius: "50%", background: p.accent, flexShrink: 0, opacity: 0.7 }} />
                   {h}
                 </li>

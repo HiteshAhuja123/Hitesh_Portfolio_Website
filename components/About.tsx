@@ -16,10 +16,10 @@ export default function About() {
           <h2 style={{ fontSize: "clamp(26px, 4vw, 44px)", fontWeight: 800, letterSpacing: "-0.03em", lineHeight: 1.15, marginBottom: 20 }}>
             I build things that <span className="grad-text">actually ship</span>
           </h2>
-          <p style={{ color: "rgba(232,232,240,0.55)", fontSize: "clamp(14px, 2vw, 16px)", lineHeight: 1.8, marginBottom: 14 }}>
+          <p style={{ color: "var(--text-muted)", fontSize: "clamp(14px, 2vw, 16px)", lineHeight: 1.8, marginBottom: 14 }}>
             Full Stack Developer currently at ICICI Lombard General Insurance, where I&apos;ve shipped complete insurance purchase flows — from quote generation to KYC, payment, and policy PDFs.
           </p>
-          <p style={{ color: "rgba(232,232,240,0.38)", fontSize: "clamp(14px, 2vw, 16px)", lineHeight: 1.8 }}>
+          <p style={{ color: "var(--text-subtle)", fontSize: "clamp(14px, 2vw, 16px)", lineHeight: 1.8 }}>
             I&apos;m drawn to complex, real-world engineering problems: state machine chatbots, headless CMS migrations at scale, and AI-integrated architectures. I care about performance, clean APIs, and systems that don&apos;t break under pressure.
           </p>
         </div>
@@ -27,9 +27,9 @@ export default function About() {
         <div className="stats-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
           {stats.map((s, i) => (
             <div key={s.label} className={`card-hover reveal reveal-delay-${i + 1}`}
-              style={{ background: "rgba(255,255,255,0.025)", borderRadius: 16, padding: "22px 18px", textAlign: "center" }}>
+              style={{ background: "var(--card-bg)", borderRadius: 16, padding: "22px 18px", textAlign: "center" }}>
               <div className="stat-val grad-text" style={{ fontSize: "clamp(28px, 4vw, 42px)", fontWeight: 800, fontFamily: "var(--font-display)", marginBottom: 6 }}>{s.value}</div>
-              <div style={{ fontSize: 12, color: "rgba(232,232,240,0.4)", letterSpacing: "0.02em" }}>{s.label}</div>
+              <div style={{ fontSize: 12, color: "var(--text-subtle)", letterSpacing: "0.02em" }}>{s.label}</div>
             </div>
           ))}
         </div>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Cursor from "@/components/Cursor";
 import Particles from "@/components/Particles";
+import ThemeProvider from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "Hitesh Ahuja — Full Stack Developer",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -20,9 +21,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
-        <Cursor />
-        <Particles />
-        {children}
+        <ThemeProvider>
+          <Cursor />
+          <Particles />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

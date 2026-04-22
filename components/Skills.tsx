@@ -32,7 +32,7 @@ export default function Skills() {
       <div style={{ display: "flex", flexDirection: "column", gap: 32 }}>
         {categories.map((cat, ci) => (
           <div key={cat.label} className={`reveal reveal-delay-${ci + 1}`}>
-            <div style={{ fontSize: 11, fontFamily: "var(--font-display)", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(232,232,240,0.3)", marginBottom: 12 }}>
+            <div style={{ fontSize: 11, fontFamily: "var(--font-display)", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--text-faint)", marginBottom: 12 }}>
               {cat.label}
             </div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>

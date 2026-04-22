@@ -67,7 +67,7 @@ export default function Hero() {
         {/* Typing role */}
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }}
           className="hero-role"
-          style={{ fontSize: "clamp(17px, 4vw, 26px)", fontFamily: "var(--font-display)", fontWeight: 500, color: "rgba(232,232,240,0.7)", minHeight: "1.5em" }}>
+          style={{ fontSize: "clamp(17px, 4vw, 26px)", fontFamily: "var(--font-display)", fontWeight: 500, color: "var(--text-soft)", minHeight: "1.5em" }}>
           <span className="grad-text typing-cursor">{displayed}</span>
         </motion.div>
 
@@ -75,7 +75,7 @@ export default function Hero() {
         <motion.p
           initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7, duration: 0.6 }}
           className="hero-bio"
-          style={{ maxWidth: 520, color: "rgba(232,232,240,0.5)", fontSize: "clamp(14px, 3vw, 17px)", lineHeight: 1.75, margin: 0, padding: "0 8px" }}>
+          style={{ maxWidth: 520, color: "var(--text-muted)", fontSize: "clamp(14px, 3vw, 17px)", lineHeight: 1.75, margin: 0, padding: "0 8px" }}>
           Full Stack Developer with 1.5+ years at ICICI Lombard, building insurance systems, AI chatbots, and CMS platforms that handle real transactions at scale.
         </motion.p>
 
@@ -100,7 +100,7 @@ export default function Hero() {
             padding: "13px 28px", borderRadius: 100,
             border: "1px solid rgba(124,110,247,0.3)",
             background: "rgba(124,110,247,0.06)",
-            color: "#e8e8f0", textDecoration: "none",
+            color: "var(--text)", textDecoration: "none",
             fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 600,
             transition: "border-color 0.2s, background 0.2s",
             whiteSpace: "nowrap",
@@ -119,9 +119,9 @@ export default function Hero() {
             { label: "GitLab", href: "https://gitlab.com/Hitesh-Ahuja" },
           ].map(s => (
             <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
-              style={{ fontSize: "clamp(10px, 2vw, 12px)", fontFamily: "var(--font-display)", color: "rgba(232,232,240,0.4)", textDecoration: "none", letterSpacing: "0.06em", textTransform: "uppercase", transition: "color 0.2s" }}
+              style={{ fontSize: "clamp(10px, 2vw, 12px)", fontFamily: "var(--font-display)", color: "var(--text-subtle)", textDecoration: "none", letterSpacing: "0.06em", textTransform: "uppercase", transition: "color 0.2s" }}
               onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "rgba(124,110,247,0.9)"}
-              onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(232,232,240,0.4)"}>
+              onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "var(--text-subtle)"}>
               {s.label} ↗
             </a>
           ))}
@@ -131,7 +131,7 @@ export default function Hero() {
       {/* Scroll indicator */}
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.4 }}
         style={{ position: "absolute", bottom: 28, left: "50%", transform: "translateX(-50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
-        <span style={{ fontSize: 10, fontFamily: "var(--font-display)", letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(232,232,240,0.22)" }}>scroll</span>
+        <span style={{ fontSize: 10, fontFamily: "var(--font-display)", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--text-faint)" }}>scroll</span>
         <div style={{ width: 1, height: 40, background: "linear-gradient(to bottom, rgba(124,110,247,0.4), transparent)", animation: "float 2s ease-in-out infinite" }} />
       </motion.div>
     </section>
