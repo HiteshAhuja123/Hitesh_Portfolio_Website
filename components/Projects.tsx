@@ -27,9 +27,9 @@ const projects = [
     href: "/projects/iltakecare", accent: "#E879F9",
   },
   {
-    tag: "Architecture", title: "Headless CMS Migration",
-    desc: "Migrated 400+ page monolithic Sitefinity CMS to headless Next.js — Lighthouse 58 → 91, deployments ~40% faster.",
-    highlights: ["400+ pages migrated", "Lighthouse 58 → 91", "SEO score 98/100", "~40% faster deployments"],
+    tag: "Web + CMS", title: "Radheshyam Glass House",
+    desc: "Full web storefront for a 30-year-old artisan glass business — built from scratch with headless CMS, live price calculator, and zero ongoing dev dependency.",
+    highlights: ["Next.js 14 + Sanity CMS + ISR", "Live ₹/sqft price calculator", "~60% image payload reduction", "0 devs needed post-launch"],
     href: "/projects/cms", accent: "#7C6EF7",
   },
   {
