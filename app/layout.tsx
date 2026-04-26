@@ -3,6 +3,7 @@ import "./globals.css";
 import Cursor from "@/components/Cursor";
 import Particles from "@/components/Particles";
 import ThemeProvider from "@/components/ThemeProvider";
+import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Hitesh Ahuja — Full Stack Developer",
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider>
           <Cursor />
           <Particles />
+          <Navbar />
           {children}
         </ThemeProvider>
       </body>
