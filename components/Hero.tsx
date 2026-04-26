@@ -94,7 +94,7 @@ export default function Hero() {
           }}
             onMouseEnter={e => { (e.currentTarget as HTMLElement).style.opacity = "0.85"; (e.currentTarget as HTMLElement).style.transform = "scale(1.04)"; }}
             onMouseLeave={e => { (e.currentTarget as HTMLElement).style.opacity = "1"; (e.currentTarget as HTMLElement).style.transform = "scale(1)"; }}>
-            See What I've Built
+            See What I&apos;ve Built
           </a>
           <a href="#contact" style={{
             padding: "13px 28px", borderRadius: 100,
@@ -107,7 +107,7 @@ export default function Hero() {
           }}
             onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(124,110,247,0.6)"; (e.currentTarget as HTMLElement).style.background = "rgba(124,110,247,0.12)"; }}
             onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(124,110,247,0.3)"; (e.currentTarget as HTMLElement).style.background = "rgba(124,110,247,0.06)"; }}>
-            Let's Talk
+            Let&apos;s Talk
           </a>
         </motion.div>
 
