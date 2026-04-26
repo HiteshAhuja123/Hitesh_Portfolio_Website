@@ -76,7 +76,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7, duration: 0.6 }}
           className="hero-bio"
           style={{ maxWidth: 520, color: "var(--text-muted)", fontSize: "clamp(14px, 3vw, 17px)", lineHeight: 1.75, margin: 0, padding: "0 8px" }}>
-          Full Stack Developer with 1.5+ years at ICICI Lombard, building insurance systems, AI chatbots, and CMS platforms that handle real transactions at scale.
+          Full Stack Developer with 1+ year at ICICI Lombard, building insurance systems, AI chatbots, and CMS platforms that handle real transactions at scale.
         </motion.p>
 
         {/* CTA buttons */}
@@ -94,7 +94,7 @@ export default function Hero() {
           }}
             onMouseEnter={e => { (e.currentTarget as HTMLElement).style.opacity = "0.85"; (e.currentTarget as HTMLElement).style.transform = "scale(1.04)"; }}
             onMouseLeave={e => { (e.currentTarget as HTMLElement).style.opacity = "1"; (e.currentTarget as HTMLElement).style.transform = "scale(1)"; }}>
-            View My Work
+            See What I've Built
           </a>
           <a href="#contact" style={{
             padding: "13px 28px", borderRadius: 100,
@@ -107,7 +107,7 @@ export default function Hero() {
           }}
             onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(124,110,247,0.6)"; (e.currentTarget as HTMLElement).style.background = "rgba(124,110,247,0.12)"; }}
             onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(124,110,247,0.3)"; (e.currentTarget as HTMLElement).style.background = "rgba(124,110,247,0.06)"; }}>
-            Get in Touch
+            Let's Talk
           </a>
         </motion.div>
 

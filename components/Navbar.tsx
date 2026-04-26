@@ -143,7 +143,7 @@ export default function Navbar() {
               letterSpacing: "0.04em", marginTop: 4,
             }}
           >
-            Download Resume
+            Grab My Resume
           </a>
         </div>
       )}

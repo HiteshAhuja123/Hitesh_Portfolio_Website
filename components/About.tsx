@@ -1,10 +1,10 @@
 "use client";
 export default function About() {
   const stats = [
-    { value: "1.5+", label: "Years experience" },
+    { value: "1+", label: "Years experience" },
     { value: "3+", label: "Products shipped" },
     { value: "91", label: "Lighthouse score" },
-    { value: "8.42", label: "CGPA" },
+    { value: "10+", label: "Microservices built" },
   ];
 
   return (
