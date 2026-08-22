@@ -33,7 +33,7 @@ export default function FreshBuyCaseStudyPage() {
             ["Zero", "Self-service capability"],
             ["None", "Digital experience"],
           ].map(([val, label]) => (
-            <div key={label} className="rounded-2xl border border-zinc-200 dark:border-white/10 bg-violet-50 dark:bg-white/[0.03] px-4 py-5 text-center">
+            <div key={label} className="rounded-2xl border border-zinc-200 dark:border-white/10 bg-emerald-50 dark:bg-white/[0.03] px-4 py-5 text-center">
               <p className="text-2xl font-bold text-red-400">{val}</p>
               <p className="text-xs text-zinc-500 mt-2">{label}</p>
             </div>
@@ -205,7 +205,7 @@ export default function FreshBuyCaseStudyPage() {
             ["–40%", "Initial load time"],
             ["99.7%", "API uptime"],
           ].map(([val, label]) => (
-            <div key={label} className="rounded-2xl border border-zinc-200 dark:border-white/10 bg-violet-50 dark:bg-white/[0.03] px-4 py-5 text-center">
+            <div key={label} className="rounded-2xl border border-zinc-200 dark:border-white/10 bg-emerald-50 dark:bg-white/[0.03] px-4 py-5 text-center">
               <p className="text-2xl font-bold text-emerald-400">{val}</p>
               <p className="text-xs text-zinc-500 mt-2">{label}</p>
             </div>

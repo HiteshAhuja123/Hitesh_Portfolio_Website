@@ -38,7 +38,7 @@ export default function CmsCaseStudyPage() {
         <p><strong style={{ color: "var(--text)" }}>Target users:</strong></p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 10, marginTop: 12, marginBottom: 20 }}>
           {["Interior designers", "Homeowners (premium)", "Hotel / office procurement", "Business owner (CMS)"].map(u => (
-            <div key={u} style={{ background: "rgba(124,110,247,0.06)", border: "1px solid rgba(124,110,247,0.15)", borderRadius: 10, padding: "10px 14px", fontSize: 13, color: "var(--text-muted)" }}>{u}</div>
+            <div key={u} style={{ background: "var(--accent-soft)", border: "1px solid var(--border)", borderRadius: 10, padding: "10px 14px", fontSize: 13, color: "var(--text-muted)" }}>{u}</div>
           ))}
         </div>
         <p><strong style={{ color: "var(--text)" }}>Key use cases:</strong></p>
@@ -50,7 +50,7 @@ export default function CmsCaseStudyPage() {
             "Client adds new products/photos in Sanity → ISR auto-publishes within 1 hour",
           ].map((uc, i) => (
             <div key={i} style={{ display: "flex", gap: 10, fontSize: 13, color: "var(--text-subtle)" }}>
-              <span style={{ color: "#7C6EF7", fontWeight: 700, flexShrink: 0 }}>{i + 1}.</span>
+              <span style={{ color: "var(--accent)", fontWeight: 700, flexShrink: 0 }}>{i + 1}.</span>
               {uc}
             </div>
           ))}
@@ -82,7 +82,7 @@ export default function CmsCaseStudyPage() {
             ["Resend over Nodemailer/SMTP", "Serverless functions have execution time limits and cold starts — SMTP connections often time out. Resend's HTTP API is reliable on serverless with better deliverability defaults and a generous free tier."],
             ["Vercel", "ISR + Edge CDN without infra management. Free tier is sufficient for a local business site with modest traffic. Deploy previews work out of the box."],
           ].map(([tech, reason]) => (
-            <div key={tech as string} style={{ borderBottom: "1px solid var(--card-border)", paddingBottom: 14 }}>
+            <div key={tech as string} style={{ borderBottom: "1px solid var(--border)", paddingBottom: 14 }}>
               <p style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 600, color: "var(--text)", marginBottom: 5 }}>{tech}</p>
               <p style={{ fontSize: 13, color: "var(--text-muted)", lineHeight: 1.7, margin: 0 }}>{reason}</p>
             </div>
@@ -111,8 +111,8 @@ export default function CmsCaseStudyPage() {
             ["ISR caching on Vercel Edge", "Pages served from CDN; content changes reflect within 60 min without touching all cached pages."],
             ["lib/constants.ts for static business config", "Zero runtime fetch for base rate, WhatsApp number, contact details. Bundled at build time."],
           ].map(([opt, desc]) => (
-            <div key={opt as string} style={{ display: "flex", gap: 12, borderBottom: "1px solid var(--card-border)", paddingBottom: 10 }}>
-              <span style={{ color: "#7C6EF7", fontWeight: 700, fontSize: 13, flexShrink: 0, minWidth: 220 }}>{opt}</span>
+            <div key={opt as string} style={{ display: "flex", gap: 12, borderBottom: "1px solid var(--border)", paddingBottom: 10 }}>
+              <span style={{ color: "var(--accent)", fontWeight: 700, fontSize: 13, flexShrink: 0, minWidth: 220 }}>{opt}</span>
               <span style={{ fontSize: 13, color: "var(--text-muted)" }}>{desc}</span>
             </div>
           ))}
@@ -161,13 +161,13 @@ export default function CmsCaseStudyPage() {
             ["<2s", "Target LCP on mobile networks"],
             ["0 devs", "Needed for content updates post-launch"],
           ].map(([val, label]) => (
-            <div key={label} style={{ borderRadius: 14, border: "1px solid var(--card-border)", background: "var(--card-bg)", padding: "20px 16px", textAlign: "center" }}>
-              <p style={{ fontSize: 26, fontWeight: 800, fontFamily: "var(--font-display)", background: "linear-gradient(135deg, #7C6EF7, #E879F9)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", margin: "0 0 6px" }}>{val}</p>
+            <div key={label} style={{ borderRadius: 14, border: "1px solid var(--border)", background: "var(--surface)", padding: "20px 16px", textAlign: "center" }}>
+              <p style={{ fontSize: 26, fontWeight: 700, fontFamily: "var(--font-display)", color: "var(--accent)", margin: "0 0 6px" }}>{val}</p>
               <p style={{ fontSize: 11, color: "var(--text-subtle)", margin: 0, lineHeight: 1.5 }}>{label}</p>
             </div>
           ))}
         </div>
-        <div style={{ marginTop: 20, padding: "16px 20px", background: "rgba(124,110,247,0.06)", border: "1px solid rgba(124,110,247,0.15)", borderRadius: 12, fontSize: 13, color: "var(--text-muted)", lineHeight: 1.7 }}>
+        <div style={{ marginTop: 20, padding: "16px 20px", background: "var(--accent-soft)", border: "1px solid var(--border)", borderRadius: 12, fontSize: 13, color: "var(--text-muted)", lineHeight: 1.7 }}>
           The most meaningful outcome isn&apos;t a performance number — it&apos;s that a 30-year-old traditional business now has a professional digital storefront that runs without ongoing developer cost. The client manages their own catalogue. That&apos;s the real product success metric.
         </div>
       </StudySection>
@@ -182,7 +182,7 @@ export default function CmsCaseStudyPage() {
             "Multi-language support (Marathi / Hindi) for the local customer base",
           ].map((item, i) => (
             <div key={i} style={{ display: "flex", gap: 12, fontSize: 13, color: "var(--text-subtle)", alignItems: "flex-start" }}>
-              <span style={{ color: "rgba(124,110,247,0.6)", flexShrink: 0, fontFamily: "var(--font-display)", fontWeight: 600 }}>{i + 1}</span>
+              <span style={{ color: "var(--text-faint)", flexShrink: 0, fontFamily: "var(--font-display)", fontWeight: 600 }}>{i + 1}</span>
               {item}
             </div>
           ))}

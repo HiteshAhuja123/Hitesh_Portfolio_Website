@@ -25,7 +25,7 @@ export default function ILTakeCareCaseStudyPage() {
             ["AI Layer", "Gemini 1.5, MCP, RAG"],
             ["Infra", "AWS, Docker, PostgreSQL"],
           ].map(([k, v]) => (
-            <div key={k as string} className="rounded-xl border border-zinc-200 dark:border-white/10 bg-violet-50 dark:bg-white/[0.03] p-4">
+            <div key={k as string} className="rounded-xl border border-zinc-200 dark:border-white/10 bg-emerald-50 dark:bg-white/[0.03] p-4">
               <p className="text-zinc-500 text-xs mb-1">{k}</p>
               <p className="text-zinc-800 dark:text-zinc-200 font-medium text-xs">{v}</p>
             </div>
@@ -198,7 +198,7 @@ export default function ILTakeCareCaseStudyPage() {
             ["65% ↓", "LLM call latency via caching"],
             ["8 langs", "Indian languages — 600M+ reach"],
           ].map(([val, label]) => (
-            <div key={label} className="rounded-2xl border border-zinc-200 dark:border-white/10 bg-violet-50 dark:bg-white/[0.03] px-4 py-5 text-center">
+            <div key={label} className="rounded-2xl border border-zinc-200 dark:border-white/10 bg-emerald-50 dark:bg-white/[0.03] px-4 py-5 text-center">
               <p className="text-2xl font-bold text-emerald-400">{val}</p>
               <p className="text-xs text-zinc-500 mt-2">{label}</p>
             </div>

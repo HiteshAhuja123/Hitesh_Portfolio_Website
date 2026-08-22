@@ -1,9 +1,30 @@
 import type { Metadata } from "next";
+import { Archivo, DM_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Cursor from "@/components/Cursor";
-import Particles from "@/components/Particles";
 import ThemeProvider from "@/components/ThemeProvider";
 import Navbar from "@/components/Navbar";
+
+const archivo = Archivo({
+  subsets: ["latin"],
+  variable: "--font-archivo",
+  weight: ["500", "600", "700", "800"],
+  display: "swap",
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+  weight: ["300", "400", "500"],
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono-jb",
+  weight: ["400", "500"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Hitesh Ahuja — Full Stack Developer",
@@ -12,19 +33,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang="en" suppressHydrationWarning className={`${archivo.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}>
       <body>
         <ThemeProvider>
           <Cursor />
-          <Particles />
           <Navbar />
           {children}
         </ThemeProvider>

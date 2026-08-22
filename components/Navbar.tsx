@@ -6,6 +6,7 @@ const links = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Work", href: "#projects" },
+  { label: "Freelance", href: "#freelance" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
 ];
@@ -47,10 +48,10 @@ export default function Navbar() {
     <>
       <nav style={{ padding: scrolled ? "10px 0" : "16px 0", transition: "padding 0.3s ease" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          {/* Logo */}
-          <a href="#" style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 18, color: "var(--text)", textDecoration: "none", letterSpacing: "-0.02em", display: "flex", alignItems: "center", gap: 8 }}>
-            <span className="grad-text">HA</span>
-            <span style={{ color: "var(--text-faint)", fontSize: 12, fontWeight: 400 }}>/ hitesh ahuja</span>
+          {/* Logo / HA mark */}
+          <a href="#" style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 17, color: "var(--text)", textDecoration: "none", letterSpacing: "-0.01em", display: "flex", alignItems: "center", gap: 8 }}>
+            <span className="ha-mark">HA</span>
+            <span style={{ color: "var(--text-faint)", fontSize: 12, fontFamily: "var(--font-mono)", fontWeight: 400 }}>/ hitesh-ahuja</span>
           </a>
 
           {/* Desktop links */}
@@ -64,20 +65,7 @@ export default function Navbar() {
               </button>
             )}
 
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              style={{
-                fontFamily: "var(--font-display)", fontSize: 12, fontWeight: 600,
-                letterSpacing: "0.06em", textTransform: "uppercase",
-                padding: "8px 18px", borderRadius: 100,
-                background: "linear-gradient(135deg, #7C6EF7, #E879F9)",
-                color: "white", textDecoration: "none",
-                transition: "opacity 0.2s",
-              }}
-              onMouseEnter={e => (e.currentTarget as HTMLElement).style.opacity = "0.85"}
-              onMouseLeave={e => (e.currentTarget as HTMLElement).style.opacity = "1"}
-            >
+            <a href="/resume.pdf" target="_blank" className="btn btn-secondary" style={{ fontSize: 12, padding: "8px 16px" }}>
               Resume
             </a>
           </div>
@@ -108,7 +96,7 @@ export default function Navbar() {
         <div style={{
           position: "fixed", top: scrolled ? 54 : 66, left: 0, right: 0,
           background: "var(--mobile-menu-bg)",
-          borderBottom: "1px solid rgba(124,110,247,0.12)",
+          borderBottom: "1px solid var(--border)",
           padding: "20px 24px 28px",
           display: "flex", flexDirection: "column", gap: 20,
           zIndex: 99,
@@ -123,27 +111,15 @@ export default function Navbar() {
               style={{
                 fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 500,
                 color: "var(--text-soft)", textDecoration: "none",
-                letterSpacing: "0.02em", padding: "4px 0",
-                borderBottom: "1px solid var(--card-border)",
+                letterSpacing: "0.01em", padding: "4px 0",
+                borderBottom: "1px solid var(--border)",
               }}
             >
               {l.label}
             </a>
           ))}
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            onClick={closeMenu}
-            style={{
-              display: "inline-block", textAlign: "center",
-              padding: "12px 24px", borderRadius: 100,
-              background: "linear-gradient(135deg, #7C6EF7, #E879F9)",
-              color: "white", textDecoration: "none",
-              fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700,
-              letterSpacing: "0.04em", marginTop: 4,
-            }}
-          >
-            Grab My Resume
+          <a href="/resume.pdf" target="_blank" onClick={closeMenu} className="btn btn-primary" style={{ justifyContent: "center", marginTop: 4 }}>
+            Grab my resume
           </a>
         </div>
       )}

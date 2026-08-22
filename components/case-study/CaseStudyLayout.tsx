@@ -11,7 +11,7 @@ export function CaseStudyLayout({ title, children }: { title: string; children: 
           ← Selected work
         </Link>
 
-        <p style={{ fontSize: 10, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.2em", color: "rgba(124,110,247,0.8)", fontFamily: "var(--font-display)", marginBottom: 12 }}>
+        <p style={{ fontSize: 10, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.2em", color: "var(--accent)", fontFamily: "var(--font-mono)", marginBottom: 12 }}>
           Case study
         </p>
         <h1 style={{ fontSize: "clamp(24px, 5vw, 42px)", fontWeight: 800, lineHeight: 1.15, letterSpacing: "-0.03em", color: "var(--text)", fontFamily: "var(--font-display)", marginBottom: 0 }}>
@@ -26,7 +26,7 @@ export function CaseStudyLayout({ title, children }: { title: string; children: 
 
 export function StudySection({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <section style={{ marginTop: "clamp(40px, 8vw, 64px)", borderTop: "1px solid var(--card-border)", paddingTop: "clamp(32px, 6vw, 56px)" }}>
+    <section style={{ marginTop: "clamp(40px, 8vw, 64px)", borderTop: "1px solid var(--border)", paddingTop: "clamp(32px, 6vw, 56px)" }}>
       <h2 style={{ fontSize: "clamp(16px, 3vw, 20px)", fontWeight: 700, letterSpacing: "-0.02em", color: "var(--text)", fontFamily: "var(--font-display)", marginBottom: 18 }}>{label}</h2>
       <div style={{ fontSize: "clamp(13px, 2vw, 15px)", lineHeight: 1.78, color: "var(--text-muted)" }}>
         {children}
@@ -37,9 +37,9 @@ export function StudySection({ label, children }: { label: string; children: Rea
 
 export function ArchBlock({ lines }: { lines: string[] }) {
   return (
-    <div style={{ marginTop: 16, borderRadius: 14, border: "1px solid var(--card-border)", background: "var(--card-bg)", padding: "clamp(14px, 3vw, 20px)", fontFamily: "monospace", fontSize: "clamp(11px, 2vw, 13px)", lineHeight: 1.7, color: "var(--text-soft)", overflowX: "auto" }}>
+    <div style={{ marginTop: 16, borderRadius: 14, border: "1px solid var(--border)", background: "var(--surface)", padding: "clamp(14px, 3vw, 20px)", fontFamily: "monospace", fontSize: "clamp(11px, 2vw, 13px)", lineHeight: 1.7, color: "var(--text-soft)", overflowX: "auto" }}>
       {lines.map((line) => (
-        <div key={line} style={{ borderBottom: "1px solid var(--card-border)", padding: "8px 0", whiteSpace: "nowrap" }} className="last:border-0 last:pb-0 first:pt-0">
+        <div key={line} style={{ borderBottom: "1px solid var(--border)", padding: "8px 0", whiteSpace: "nowrap" }} className="last:border-0 last:pb-0 first:pt-0">
           {line}
         </div>
       ))}

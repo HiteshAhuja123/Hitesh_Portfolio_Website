@@ -159,7 +159,7 @@ export default function ChatbotCaseStudyPage() {
             ["0", "FE deploys for new product launches"],
             ["<200ms", "Response on structured steps"],
           ].map(([val, label]) => (
-            <div key={label} className="rounded-2xl border border-zinc-200 dark:border-white/10 bg-violet-50 dark:bg-white/[0.03] px-5 py-6 text-center">
+            <div key={label} className="rounded-2xl border border-zinc-200 dark:border-white/10 bg-emerald-50 dark:bg-white/[0.03] px-5 py-6 text-center">
               <p className="text-3xl font-bold text-emerald-400">{val}</p>
               <p className="text-sm text-zinc-500 mt-2">{label}</p>
             </div>
