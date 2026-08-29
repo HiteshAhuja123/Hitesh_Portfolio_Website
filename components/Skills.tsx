@@ -3,23 +3,31 @@ export default function Skills() {
   const categories = [
     {
       label: "Frontend",
-      skills: ["Angular", "Next.js", "React", "JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3", "Tailwind CSS"],
+      skills: ["Next.js", "React", "Angular", "TypeScript", "JavaScript (ES6+)", "RxJS", "Zustand", "TanStack Query", "Tailwind CSS"],
+    },
+    {
+      label: "Languages",
+      skills: ["TypeScript", "JavaScript", "Java", "Python", "C#", "SQL"],
     },
     {
       label: "Backend & APIs",
-      skills: ["FastAPI", "REST APIs", "MCP Tool Architecture", "Node.js", ".NET / C#", "Java", "JSON"],
+      skills: ["FastAPI", ".NET Core", "Node.js", "Spring Boot", "REST APIs", "JWT"],
     },
     {
-      label: "Database",
-      skills: ["SQL", "Oracle DB", "MongoDB", "DBMS"],
+      label: "AI & LLM",
+      skills: ["LLM Integration", "RAG", "MCP", "Spring AI", "AI Agents", "SSE"],
     },
     {
-      label: "DevOps & Tools",
-      skills: ["Git", "Jenkins CI/CD", "AWS EC2 & ECS", "Postman", "Figma", "VS Code"],
+      label: "Cloud & DevOps",
+      skills: ["AWS EC2", "AWS Secrets Manager", "Docker", "Jenkins CI/CD", "Git", "Postman"],
     },
     {
-      label: "Concepts",
-      skills: ["System Design", "Headless CMS", "AI Integration", "State Machines", "Lighthouse / SEO", "SSE", "RxJS"],
+      label: "Databases",
+      skills: ["PostgreSQL", "Oracle DB", "MongoDB", "MySQL"],
+    },
+    {
+      label: "Realtime & Integrations",
+      skills: ["SignalR", "Google Maps", "CleverTap", "GA4", "GTM", "Lighthouse", "OCR / ICR"],
     },
   ];
 
@@ -34,7 +42,7 @@ export default function Skills() {
         {categories.map((cat, ci) => (
           <div
             key={cat.label}
-            className={`reveal reveal-delay-${ci + 1} skills-row`}
+            className={`reveal reveal-delay-${Math.min(ci + 1, 5)} skills-row`}
             style={{
               display: "grid",
               gridTemplateColumns: "180px 1fr",

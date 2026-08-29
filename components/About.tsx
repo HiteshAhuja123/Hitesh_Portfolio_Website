@@ -1,10 +1,10 @@
 "use client";
 export default function About() {
   const stats = [
-    { value: "1+", label: "Years experience" },
-    { value: "3+", label: "Products shipped" },
+    { value: "1.5+", label: "Years experience" },
+    { value: "6", label: "Products shipped" },
     { value: "91", label: "Lighthouse score" },
-    { value: "10+", label: "Microservices built" },
+    { value: "10K+", label: "Daily API requests" },
   ];
 
   return (
@@ -17,10 +17,10 @@ export default function About() {
             I build things that <span className="accent-text">actually ship</span>.
           </h2>
           <p style={{ color: "var(--text-muted)", fontSize: "clamp(14px, 2vw, 16px)", lineHeight: 1.8, marginBottom: 16 }}>
-            Full Stack Developer currently at ICICI Lombard General Insurance, where I&apos;ve shipped complete insurance purchase flows — from quote generation to KYC, payment, and policy PDFs.
+            Full Stack Software Engineer at ICICI Lombard General Insurance, where I build customer-facing insurance products — a conversational AI purchase journey, a healthcare marketplace, and Next.js / Angular purchase flows — from the frontend through to API integration.
           </p>
           <p style={{ color: "var(--text-subtle)", fontSize: "clamp(14px, 2vw, 16px)", lineHeight: 1.8 }}>
-            I&apos;m drawn to complex, real-world engineering problems: state machine chatbots, headless CMS migrations at scale, and AI-integrated architectures. I care about performance, clean APIs, and systems that don&apos;t break under pressure.
+            I work mostly on the frontend and full-stack product layer: Next.js, React, Angular, TypeScript, RxJS, Zustand and TanStack Query, backed by REST APIs in FastAPI and .NET. I care about performance, resilient streaming and real-time UIs, clean API contracts, and systems that hold up in production.
           </p>
         </div>
 

@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const roles = [
-  "Frontend Developer",
-  "AI Systems Builder",
   "Full Stack Engineer",
-  "Next.js Specialist",
+  "Frontend Specialist",
+  "Next.js Developer",
+  "AI Product Engineer",
 ];
 
 const ease = [0.16, 1, 0.3, 1] as const;
@@ -97,7 +97,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8, duration: 0.6, ease }}
           className="hero-bio"
           style={{ maxWidth: 540, color: "var(--text-muted)", fontSize: "clamp(15px, 2vw, 17px)", lineHeight: 1.75, margin: "22px 0 0" }}>
-          Full Stack Developer with 1+ year at ICICI Lombard, building insurance systems, AI chatbots, and CMS platforms that handle real transactions at scale.
+          Full Stack Software Engineer with 1.5+ years at ICICI Lombard, building customer-facing insurance products — conversational AI journeys, a healthcare marketplace, and Next.js / Angular purchase flows — across the frontend-to-API stack.
         </motion.p>
 
         {/* CTA buttons */}

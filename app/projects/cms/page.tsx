@@ -2,20 +2,22 @@ import type { Metadata } from "next";
 import { ArchBlock, CaseStudyLayout, StudySection } from "@/components/case-study/CaseStudyLayout";
 
 export const metadata: Metadata = {
-  title: "Radheshyam Glass House — Web Storefront | Hitesh Ahuja",
-  description: "Full web storefront for a 30-year-old artisan business. Next.js 14, Sanity CMS, ISR, Resend, live price calculator. Built from scratch with zero ongoing dev dependency.",
+  title: "Radheshyam Glass House — End-to-End Digital Build",
+  description: "End-to-end digital build for a 30-year-old artisan glass business — a Sanity-powered Next.js storefront with ISR and a live price calculator, plus a Node.js + PostgreSQL CRM with JWT role access and a 9-stage inquiry-to-dispatch workflow.",
 };
 
 export default function CmsCaseStudyPage() {
   return (
-    <CaseStudyLayout title="Radheshyam Glass House — Web Storefront">
+    <CaseStudyLayout title="Radheshyam Glass House — End-to-End Digital Build">
 
       <StudySection label="Overview">
         <p>
           Radheshyam Glass House is a 30-year-old artisan mirror and glass business in Ulhasnagar,
           Maharashtra that operated entirely on word-of-mouth with no digital presence. I designed and
-          built their complete web storefront from scratch — a performant, content-managed site that
-          lets a non-technical client independently manage their entire catalogue, gallery, and pricing.
+          built their complete digital setup from scratch: a performant, content-managed storefront that
+          lets a non-technical client run their own catalogue, gallery and pricing — and a separate
+          full-stack CRM (React, Node.js, PostgreSQL) that tracks every customer inquiry through a
+          9-stage inquiry-to-dispatch workflow with JWT-based role access.
         </p>
       </StudySection>
 
@@ -69,6 +71,27 @@ export default function CmsCaseStudyPage() {
             <div key={title as string}>
               <h4 style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 600, color: "var(--text)", marginBottom: 6 }}>{title}</h4>
               <p style={{ fontSize: 13, color: "var(--text-subtle)", lineHeight: 1.7, margin: 0 }}>{desc}</p>
+            </div>
+          ))}
+        </div>
+      </StudySection>
+
+      <StudySection label="CRM — Inquiry to Dispatch">
+        <p>
+          The storefront captures demand; the CRM is where the business acts on it. It is a separate
+          full-stack app — React frontend, Node.js API, PostgreSQL — with JWT-based authentication and
+          role access so the owner and staff see different capabilities.
+        </p>
+        <div style={{ marginTop: 12, display: "flex", flexDirection: "column", gap: 8 }}>
+          {[
+            "Every enquiry (form or WhatsApp hand-off) becomes a tracked record",
+            "A 9-stage workflow moves each job from first contact through quotation, approval, production and dispatch",
+            "Role-based access separates owner-level actions from staff updates",
+            "Status history gives the owner a single view of what is in progress and what is stuck",
+          ].map((item, i) => (
+            <div key={i} style={{ display: "flex", gap: 10, fontSize: 13, color: "var(--text-subtle)" }}>
+              <span style={{ color: "var(--accent)", fontWeight: 700, flexShrink: 0 }}>{i + 1}.</span>
+              {item}
             </div>
           ))}
         </div>

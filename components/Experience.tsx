@@ -2,37 +2,27 @@ export default function Experience() {
   const jobs = [
     {
       company: "ICICI Lombard General Insurance",
-      role: "Frontend Developer — Full-Time",
+      role: "Full Stack Developer",
       period: "Aug 2025 – Present",
       location: "Mumbai, India",
       bullets: [
-        "Built end-to-end Travel & Home Insurance flows — KYC with OCR/ICR, RSA-encrypted payment (Juspay/AgoraX), automated policy PDF generation",
-        "Designed AI Chatbot (Next.js + FastAPI + SSE) — 95%+ intent accuracy, <200ms response time, ~60% LLM cost reduction",
-        "Led CMS migration from Sitefinity → headless Next.js across 400+ pages, cutting deployment time ~40%",
-        "Boosted Lighthouse score from 58 → 91 (+57%), SEO 98/100, load time cut ~35%",
-        "Architected MCP-based tool wrappers exposing 10+ insurance endpoints to ChatGPT",
+        "Built the frontend for a Travel Insurance Conversational AI journey (Next.js 15, React, TypeScript, SSE) — conversational quote, KYC, insured details and payment flows with dynamic UI-schema rendering and resilient stream parsing",
+        "Developed the OPD & Elevate Her healthcare marketplace (Next.js 16, React 19) embedded in a Flutter WebView, covering 10+ service verticals, using Zustand and TanStack Query for state and SignalR for real-time features",
+        "Implemented a typed Flutter ↔ WebView bridge and a custom API/service layer handling JWT auth, token refresh and encrypted payloads across multiple API domains",
+        "Contributed to the Angular Home Insurance purchase flow — reactive forms, RxJS state, premium and add-on integrations against .NET Core REST APIs",
+        "Delivered 7–8 business-driven change requests across insurance products, primarily frontend with 1–2 .NET backend changes",
+        "Worked across the AWS ecosystem (EC2, Secrets Manager) with Docker-based deployments and Jenkins CI/CD, with hands-on exposure to FastAPI and .NET APIs across the frontend-to-API lifecycle",
       ],
     },
     {
       company: "ICICI Lombard General Insurance",
-      role: "Frontend Developer — Intern",
+      role: "Software Engineer Intern",
       period: "Feb 2025 – Aug 2025",
       location: "Mumbai, India",
       bullets: [
-        "GA4 event tracking across 15+ user journey touchpoints — identified key drop-offs",
-        "Integrated KYC flows (OCR/ICR) for automated document verification",
-        "Reduced JS bundle size ~22% by removing unused dependencies, cutting initial page load ~1.2s",
-      ],
-    },
-    {
-      company: "One Stop Engineering",
-      role: "Full Stack Developer Intern — Flick Ticket",
-      period: "Jul 2024 – Aug 2024",
-      location: "Remote",
-      bullets: [
-        "Built hybrid ticket booking system (Laravel + React) with dynamic multi-venue seat layouts",
-        "Implemented overlapping schedule detection — 100% conflict resolution in QA",
-        "Practiced MVC architecture and RESTful API design across a full stack codebase",
+        "Built and shipped a mobile-first Next.js 14 travel-insurance campaign landing journey reached from YouTube/Instagram ads, owning requirement-gathering and the 6-step quote flow",
+        "Reduced time-to-quote from ~5 minutes to ~2.5 minutes through frontend and Lighthouse performance optimization",
+        "Deployed on AWS EC2 via Jenkins; implemented GA4/GTM events across key interactions to track progression and drop-offs on an application handling 10K+ daily API requests",
       ],
     },
   ];
